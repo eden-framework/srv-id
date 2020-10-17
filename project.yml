@@ -1,0 +1,14 @@
+name: srv-id
+group: newtengroup
+owner: newtengroup
+version: 0.0.0
+description: id generation service of infrastructure
+program_language: golang
+workflow:
+  extends: feature-pr
+scripts:
+  build:
+  - go build -v -o ./build/$PROJECT_NAME -ldflags "-X github.com/eden-framework/apollo.Branch=$DRONE_BRANCH.json"
+    ./cmd
+  - eden generate openapi
+  test: go test ./cmd

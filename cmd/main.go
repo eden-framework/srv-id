@@ -14,7 +14,6 @@ func main() {
 		application.WithApollo(&global.ApolloConfig))
 
 	app.Start()
-
 }
 
 func runner(ctx *context.WaitStopContext) error {

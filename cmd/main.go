@@ -10,8 +10,7 @@ import (
 
 func main() {
 	app := application.NewApplication(runner,
-		application.WithConfig(&global.Config),
-		application.WithApollo(&global.ApolloConfig))
+		application.WithConfig(&global.Config))
 
 	app.Start()
 }

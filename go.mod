@@ -2,9 +2,7 @@ module gitee.com/newtengroup/srv-id
 
 go 1.14
 
-replace (
-	k8s.io/client-go => k8s.io/client-go v0.18.8
-)
+replace k8s.io/client-go => k8s.io/client-go v0.18.8
 
 require (
 	github.com/eden-framework/context v0.0.2

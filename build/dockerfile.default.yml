@@ -26,8 +26,7 @@ add:
   ./build/srv-id: ./
   ./project.yml: ./
 expose:
-- "80"
+- "8800"
+- "8900"
 cmd:
 - ./srv-id
-- -d=false
-- -m=false

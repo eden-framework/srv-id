@@ -3,7 +3,6 @@ module gitee.com/newtengroup/srv-id
 go 1.14
 
 replace (
-	github.com/eden-framework/eden-framework => /Users/liyiwen/Documents/golang/src/github.com/eden-framework/eden-framework
 	k8s.io/client-go => k8s.io/client-go v0.18.8
 )
 

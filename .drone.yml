@@ -7,23 +7,6 @@ volumes:
   host:
     path: /var/run/docker.sock
 steps:
-- name: testFeature_test
-  image: registry.cn-hangzhou.aliyuncs.com/profzone/golang-onbuild:1.14
-  pull: always
-  commands:
-  - eden ci run test
-  environment:
-    GOENV: TEST
-  when:
-    branch:
-      include:
-      - test/feature/*
-      exclude: []
-  volumes:
-  - name: temp
-    path: /go
-  - name: host
-    path: /var/run/docker.sock
 - name: testFeature_build
   image: registry.cn-hangzhou.aliyuncs.com/profzone/golang-onbuild:1.14
   pull: always
@@ -42,7 +25,7 @@ steps:
   - name: host
     path: /var/run/docker.sock
 - name: testFeature_ship
-  image: registry.cn-hangzhou.aliyuncs.com/profzone/golang-onship:1.0.18
+  image: registry.cn-hangzhou.aliyuncs.com/profzone/golang-onship:1.14
   pull: always
   commands:
   - eden ci ship --push
@@ -59,7 +42,7 @@ steps:
   - name: host
     path: /var/run/docker.sock
 - name: testFeature_deploy
-  image: registry.cn-hangzhou.aliyuncs.com/profzone/golang-ondeploy:1.14
+  image: registry.cn-hangzhou.aliyuncs.com/profzone/golang-ondeploy:2.4.3
   pull: always
   commands:
   - eden ci deploy
@@ -69,23 +52,6 @@ steps:
     branch:
       include:
       - test/feature/*
-      exclude: []
-  volumes:
-  - name: temp
-    path: /go
-  - name: host
-    path: /var/run/docker.sock
-- name: demoFeature_test
-  image: registry.cn-hangzhou.aliyuncs.com/profzone/golang-onbuild:1.14
-  pull: always
-  commands:
-  - eden ci run test
-  environment:
-    GOENV: DEMO
-  when:
-    branch:
-      include:
-      - demo/feature/*
       exclude: []
   volumes:
   - name: temp
@@ -110,7 +76,7 @@ steps:
   - name: host
     path: /var/run/docker.sock
 - name: demoFeature_ship
-  image: registry.cn-hangzhou.aliyuncs.com/profzone/golang-onship:1.0.18
+  image: registry.cn-hangzhou.aliyuncs.com/profzone/golang-onship:1.14
   pull: always
   commands:
   - eden ci ship --push
@@ -127,7 +93,7 @@ steps:
   - name: host
     path: /var/run/docker.sock
 - name: demoFeature_deploy
-  image: registry.cn-hangzhou.aliyuncs.com/profzone/golang-ondeploy:1.14
+  image: registry.cn-hangzhou.aliyuncs.com/profzone/golang-ondeploy:2.4.3
   pull: always
   commands:
   - eden ci deploy
@@ -161,7 +127,7 @@ steps:
   - name: host
     path: /var/run/docker.sock
 - name: master_ship
-  image: registry.cn-hangzhou.aliyuncs.com/profzone/golang-onship:1.0.18
+  image: registry.cn-hangzhou.aliyuncs.com/profzone/golang-onship:1.14
   pull: always
   commands:
   - eden ci ship --push
@@ -178,7 +144,7 @@ steps:
   - name: host
     path: /var/run/docker.sock
 - name: master_deploy
-  image: registry.cn-hangzhou.aliyuncs.com/profzone/golang-ondeploy:1.14
+  image: registry.cn-hangzhou.aliyuncs.com/profzone/golang-ondeploy:2.4.3
   pull: always
   commands:
   - eden ci deploy --env=STAGING
@@ -190,23 +156,6 @@ steps:
     branch:
       include:
       - master
-      exclude: []
-  volumes:
-  - name: temp
-    path: /go
-  - name: host
-    path: /var/run/docker.sock
-- name: feature_test
-  image: registry.cn-hangzhou.aliyuncs.com/profzone/golang-onbuild:1.14
-  pull: always
-  commands:
-  - eden ci run test
-  environment:
-    GOENV: STAGING
-  when:
-    branch:
-      include:
-      - feature/*
       exclude: []
   volumes:
   - name: temp
@@ -231,7 +180,7 @@ steps:
   - name: host
     path: /var/run/docker.sock
 - name: feature_ship
-  image: registry.cn-hangzhou.aliyuncs.com/profzone/golang-onship:1.0.18
+  image: registry.cn-hangzhou.aliyuncs.com/profzone/golang-onship:1.14
   pull: always
   commands:
   - eden ci ship --push
@@ -248,7 +197,7 @@ steps:
   - name: host
     path: /var/run/docker.sock
 - name: feature_deploy
-  image: registry.cn-hangzhou.aliyuncs.com/profzone/golang-ondeploy:1.14
+  image: registry.cn-hangzhou.aliyuncs.com/profzone/golang-ondeploy:2.4.3
   pull: always
   commands:
   - eden ci deploy

@@ -5,7 +5,7 @@ version: 0.0.0
 description: id generation service of infrastructure
 program_language: golang
 workflow:
-  extends: feature-pr
+  extends: feature-pr-no-test
 scripts:
   build:
   - go build -v -o ./build/$PROJECT_NAME ./cmd

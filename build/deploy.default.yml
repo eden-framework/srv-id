@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   creationTimestamp: null
-  name: ${PROJECT_NAME}
+  name: ${PROJECT_NAME}-${PROJECT_VERSION}
   namespace: ${PROJECT_GROUP}
 spec:
   replicas: 1

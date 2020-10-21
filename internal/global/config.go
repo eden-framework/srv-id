@@ -37,7 +37,7 @@ var Config = struct {
 
 	GenerateAlgorithm: enums.GENERATE_ALGORITHM__SNOWFLAKE,
 	SnowFlakeConfig: SnowFlakeConfig{
-		Epoch:    1202921769000,
+		Epoch:    1302921769000,
 		NodeID:   1,
 		NodeBits: 10,
 		StepBits: 12,

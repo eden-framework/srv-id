@@ -148,8 +148,6 @@ steps:
   pull: always
   commands:
   - eden ci deploy --env=STAGING
-  - eden ci deploy --env=TEST
-  - eden ci deploy --env=DEMO
   environment:
     GOENV: PROD
   when:

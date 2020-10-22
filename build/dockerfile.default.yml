@@ -16,12 +16,12 @@ env:
   SRV_ID_HTTPSERVER_WITHCORS: "true"
   SRV_ID_HTTPSERVER_WRITETIMEOUT: "0"
   SRV_ID_LOGLEVEL: debug
-  SRV_ID_SNOWFLAKECONFIG_EPOCH: "1202921769000"
+  SRV_ID_SNOWFLAKECONFIG_EPOCH: "1002921769000"
   SRV_ID_SNOWFLAKECONFIG_NODEBITS: "10"
   SRV_ID_SNOWFLAKECONFIG_NODEID: "1"
   SRV_ID_SNOWFLAKECONFIG_STEPBITS: "12"
 add:
-  ./api/openapi.json: ./
+  ./api/openapi.json: ./api/openapi.json
   ./build/configs: ./configs
   ./build/srv-id: ./
   ./project.yml: ./

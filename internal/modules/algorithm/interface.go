@@ -1,6 +1,6 @@
 package algorithm
 
-import "gitee.com/newtengroup/srv-id/internal/constants/enums"
+import "github.com/eden-framework/srv-id/internal/constants/enums"
 
 type GeneratorAlgorithm interface {
 	GetAlgorithmID() enums.GenerateAlgorithm

@@ -2,11 +2,11 @@ package v0
 
 import (
 	"context"
-	"gitee.com/newtengroup/srv-id/internal/constants/errors"
-	"gitee.com/newtengroup/srv-id/internal/global"
-	"gitee.com/newtengroup/srv-id/internal/modules/algorithm"
 	"github.com/eden-framework/courier"
 	"github.com/eden-framework/courier/httpx"
+	"github.com/eden-framework/srv-id/internal/constants/errors"
+	"github.com/eden-framework/srv-id/internal/global"
+	"github.com/eden-framework/srv-id/internal/modules/algorithm"
 )
 
 func init() {

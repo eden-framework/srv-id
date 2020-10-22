@@ -1,9 +1,9 @@
 package algorithm
 
 import (
-	"gitee.com/newtengroup/srv-id/internal/constants/enums"
-	"gitee.com/newtengroup/srv-id/internal/constants/errors"
-	"gitee.com/newtengroup/srv-id/internal/global"
+	"github.com/eden-framework/srv-id/internal/constants/enums"
+	"github.com/eden-framework/srv-id/internal/constants/errors"
+	"github.com/eden-framework/srv-id/internal/global"
 	"strconv"
 	"sync"
 	"time"

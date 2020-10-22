@@ -1,8 +1,11 @@
-module gitee.com/newtengroup/srv-id
+module github.com/eden-framework/srv-id
 
 go 1.14
 
-replace k8s.io/client-go => k8s.io/client-go v0.18.8
+replace (
+	k8s.io/client-go => k8s.io/client-go v0.18.8
+	github.com/eden-framework/eden-framework => /Users/liyiwen/Documents/golang/src/github.com/eden-framework/eden-framework
+)
 
 require (
 	github.com/eden-framework/context v0.0.2

@@ -1,6 +1,6 @@
 name: srv-id
-group: newtengroup
-owner: newtengroup
+group: base
+owner: eden-framework
 version: 0.0.0
 description: id generation service of infrastructure
 program_language: golang

@@ -1,10 +1,10 @@
 package main
 
 import (
-	"gitee.com/newtengroup/srv-id/internal/global"
-	"gitee.com/newtengroup/srv-id/internal/routers"
 	"github.com/eden-framework/context"
 	"github.com/eden-framework/eden-framework/pkg/application"
+	"github.com/eden-framework/srv-id/internal/global"
+	"github.com/eden-framework/srv-id/internal/routers"
 	"github.com/sirupsen/logrus"
 )
 

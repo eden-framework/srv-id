@@ -1,9 +1,9 @@
 package global
 
 import (
-	"gitee.com/newtengroup/srv-id/internal/constants/enums"
 	"github.com/eden-framework/courier/transport_grpc"
 	"github.com/eden-framework/courier/transport_http"
+	"github.com/eden-framework/srv-id/internal/constants/enums"
 	"github.com/sirupsen/logrus"
 )
 

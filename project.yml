@@ -1,5 +1,5 @@
 name: srv-id
-group: base
+group: newtengroup
 owner: eden-framework
 version: 0.0.0
 description: id generation service of infrastructure
